@@ -17,10 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 
-from user.views import get_user_list
+from .views import add_user,user_detail,get_user_list,mod_user
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('user/',include("user.urls")),
-    path('address/', include("address.urls")),
-    path('goods/', include("goods.urls")),
+    path('add_user',add_user),
+    path('user_list',get_user_list),
+    path('mod_user',mod_user),
+    path('user_detail/<int:id>', user_detail)
 ]

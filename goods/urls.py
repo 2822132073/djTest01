@@ -19,8 +19,5 @@ from django.urls import path,include
 
 from user.views import get_user_list
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('user/',include("user.urls")),
-    path('address/', include("address.urls")),
-    path('goods/', include("goods.urls")),
+
 ]
